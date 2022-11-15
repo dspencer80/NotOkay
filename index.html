@@ -5,43 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>It's okay to not be okay</title>
-    <link rel="icon" type="image/x-icon" href="favi.jfif">
+    <link rel="icon" type="image/x-icon" href="moOyNS01.svg">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
 </head>
 <body>
+    <!-- Outline -->
     <div class="glass-view">
         <div class="header">
-            <h1><span>NOT-OKAY?</span></h1>
+            <h1>NOT-OKAY?</h1>
             <div class="nav">
-                <a href="#" class="nav-item">Home</a>
-                <a href="#" class="nav-item">About</a>
-                <a href="#" class="nav-item">Contact</a>
+                <!-- <a href="#" class="nav-item">Home</a>
+                <a href="#" class="nav-item">About</a> -->
+                <a href="#" class="nav-item">Log In</a>
             </div>
         </div>
+        <!-- Login Form -->
         <div class="login-form">
-            <h1>Login</h1>
-            <input type="Full Name"placeholder="Full Name" class="input"><br><br>
-            <input type="Email"placeholder="Email" class="input"><br><br>
-            <input type="Password"placeholder="Password" class="input"><br><br>
-            <p>Forgot Password</p><br>
-            <button type="submit">Submit</button><br><br>
-
-        </div>
-        <!-- <div class="content-container">
-            <div class="content">
-                <h2>Beautiful</h2>
-                <p>jfjfjfjfjfjf</p>
-                <button>Get Your Local Weather</button>
-                <div class="search">
-                    <input type="text" class="search-bar" placeholder="search">
-                    <button class="btn"><i class="fas fa-search"></i></button>
-                </div>
-            </div> -->
+            <form action="results.html" method="GET">
+            <h1>SIGN UP</h1>
             
-            <!-- <div class="img-container">
-                <img src="jbKEKe01.svg" alt="view" srcset="">
-            </div> -->
+            <div>
+                <label for="name"></label>
+                <input type="text" name="name" id="name" placeholder="Username" required>
+            </div>
+            <div>
+                <label for="password"></label>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+            </div>
+            <div>
+                <label for="email"></label>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+            </div>
+            <div>
+                <label for="BirthDate"></label>
+                <input type="date" name="birthdate" id="birthdate" placeholder="birthdate" required>
+            </div>
+            <!-- Gender -->
+            <div>
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="male" value="male">
+            </div>
+            <div>
+                <label for="female">Female</label>
+                <input type="radio" name="gender" id="female" value="female">
+            </div>
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+            </form>
+        </div>
+        
         </div>
     </div>
 

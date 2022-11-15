@@ -25,17 +25,27 @@ body{
     height: 90%;
 }
 
+.glass-view h1{
+    color: rgb(0, 0, 0);
+}
+  
+
+.glass-view h1 span{
+    color: rgb(153, 249, 192);
+}
+
 .header{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-
+/* NavBar */
 .nav a{
     text-decoration: none;
-    color:rgb(37, 37, 37);
+    color:rgb(0, 0, 0);
     margin: 0 10px;
+    font-size: 25px;
 }
 
 
@@ -66,66 +76,82 @@ body{
     align-items: center;
     justify-content: space-between;
     height: inherit;
-    padding: 0 20px;
+    padding: 0 20px; 
 
 }
 
-.content h2{
-    font-size: 2rem;
-}
-
-.content p{
-    max-width: 500px;
-
-}
-
-.content button{
+/* .content button{
     padding: 10px 30px;
     font-size: 1rem;
     border: 1px solid #1c1c1c30;
     border-radius: 10px;
     background-color: rgb(37, 37, 37);
     color: rgb(123, 123, 126);
-    margin-top: 30px;
-}
+    margin-top: 30px; */
 
-.img-container{
-    max-width: 500px;
+
+/* .img-container{
+    max-width: 5000px;
 }
 
 .img-container{
     width: 100%;
-}
+} */
 
-.search{
-    padding: 20px;
-}
+  .search{
+    padding: 10px; 
+} 
 
-.search button{
+/* .search button{
     padding: 2px;
     color: white;
+}  */
+::-webkit-input-placeholder{
+    color: black;
 }
-
-.login-form{
+ .login-form{
     text-align: center;
-    width: 250px;
+    width: 600px;
     margin: 8% auto 0;
     padding: 20px;
-    box-shadow: 0 0 3px rgb(153, 249, 192);
+    box-shadow: 0 15px 25px rgb(153, 249, 192);
+    border-bottom: 3px solid rgb(153, 249, 192);
+    border-radius: 10px;
     
 }
 
-.input{
-    border-radius: 10px;
-    padding: 2px;
-    margin: 10px 0;
-    border: 2px solid rgb(247, 252, 249);
+.login-form h1{
+    color: rgb(0, 0, 0);
+    
 }
+
+.login-form {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    
+    
+}
+
+
+.login-form input{
+    width: 100%;
+    padding: 1px; 
+    color: black;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid rgb(153, 249, 192);
+    outline: none;
+    background: transparent;
+}
+
+
+
 
 button{
     border-radius: 2px;
-    width: 50%;
+    width: 25%;
     background-color: rgb(186, 188, 187);
 
-}
+} 
 
