@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
 </head>
 <body>
+    
     <!-- Outline -->
     <div class="glass-view">
         <div class="header">
@@ -17,48 +18,93 @@
             <div class="nav">
                 <!-- <a href="#" class="nav-item">Home</a>
                 <a href="#" class="nav-item">About</a> -->
-                <a href="#" class="nav-item">Log In</a>
+                <a href="#" class="nav-item">Resources</a>
             </div>
         </div>
         <!-- Login Form -->
         <div class="login-form">
+            <input class="storage">
             <form action="results.html" method="GET">
-            <h1>SIGN UP</h1>
+            
+            <h1>Add Trusted Friends</h1>
             
             <div>
+                
                 <label for="name"></label>
-                <input type="text" name="username" id="username" placeholder="Username" required>
-                <p id="username-err">Please enter a valid username</p>
+                <input type="text" name="name" id="name" placeholder="Name" required>
             </div>
             <div>
-                <label for="password"></label>
-                <input type="password" name="password" id="password" placeholder="Password" required>
+                <label for="number"></label>
+                <input type="text" name="number" id="number" placeholder="Phone Number" required>
+                <p id="number-err">Please enter a valid number</p>
             </div>
-            <div>
+                 
+            <!-- <div>
                 <label for="email"></label>
                 <input type="email" name="email" id="email" placeholder="Email" required>
-            </div>
-            <div>
+            </div> -->
+            <!-- <div>
                 <label for="BirthDate"></label>
                 <input type="text" name="birthdate" id="birthdate" placeholder="Birthdate" required>
-            </div>
+            </div> -->
             <!-- Gender -->
-            <div>
+            <!-- <div>
                 <label for="male">Male</label>
                 <input type="radio" name="gender" id="male" value="male">
             </div>
             <div>
                 <label for="female">Female</label>
-                <input type="radio" name="gender" id="female" value="female">
-            </div>
+                <input type="radio" name="gender" id="female" value="female"> -->
+            <!-- </div>
             <button type="reset">Reset</button>
-            <button type="submit">Submit</button>
+            <div> -->
+            <!-- <button id="btn" type="submit">Seek Help</button> -->
+            <button type="submit">SAVE </button>
+            </div>
             </form>
         </div>
+    
         
         </div>
     </div>
+    <script>
+        const form = document.querySelector('form');
 
-    <script src="/script.js"></script>
+        form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const fd = new FormData(form);
+        const obj = Object.fromEntries(fd);
+        
+        const json = JSON.stringify(obj);
+        localStorage.setItem('form', json);
+
+        window.location.href = "json.html";
+        
+        
+        })
+    </script>
+   <!-- <script> 
+   let friends = [];
+const addFriend = (ev)=>{
+    ev.preventDefault();
+    let friend = {
+        id: Date.now(),
+        name: document.getElementById('name').value,
+        number: document.getElementById('number').value
+     }
+     friends.push(friend);
+     document.querySelector('form').reset();
+
+     console.warn('added' , {friends} );
+     let pre = document.querySelector('#msg pre');
+     pre.textContent = '\n' + JSON.stringify(friends, '\t' , 2);
+
+     document.addEventListener('DOMContentLoaded' , ()=>{
+        document.getElementById('btn').addEventListener('click' , addFriend);
+     })
+    }
+     </script>  -->
+
+     <script src="/script.js"></script>
 </body>
 </html>
